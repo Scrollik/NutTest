@@ -28,7 +28,7 @@ class LoginController extends Controller
                 ]);
         }
         $request->session()->regenerate();
-        return redirect('album.index');
+        return redirect('/');
 
     }
     public function destroy (Request $request)
