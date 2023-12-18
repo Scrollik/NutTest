@@ -31,4 +31,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'fm' => [
+        'key' => env('FM_API_KEY'),
+        'url' => env('FM_API_URL'),
+    ],
+
 ];

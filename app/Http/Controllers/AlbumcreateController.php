@@ -17,10 +17,10 @@ class AlbumcreateController extends Controller
     public function find(Request $request)
     {
         if($request->ajax()){
-            $response = Http::get('http://ws.audioscrobbler.com/2.0/',[
+            $response = Http::get(config('services.fm.url') ,[
                 'method' => 'album.search',
                 'album' => $request->value,
-                'api_key' => 'efe350e6b453f277990cabdd9289d1b9',
+                'api_key' => config('services.fm.key'),
                 'limit' => '1',
                 'format' => 'json',
             ]);
