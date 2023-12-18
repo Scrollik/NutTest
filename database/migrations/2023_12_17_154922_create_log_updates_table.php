@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('log_updates', function (Blueprint $table) {
             $table->integer('albums_id');
-            $table->foreign('albums_id', 'albums_id_fk')->on('albums')->references('id')->onDelete('no action');
             $table->integer('users_id');
-            $table->foreign('users_id', 'users_id_fk')->on('users')->references('id')->onDelete('no action');
             $table->timestamps();
         });
     }
